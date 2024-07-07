@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deposit Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Deposit Confirmation</h2>
+        </div>
+        <div class="content">
+            <h3>Hello {{ user.first_name }} {{ user.last_name }},</h3>
+            <p>Your deposit request for <strong>{{ amount }} BDT</strong> has been successfully completed. After the deposit, your total account balance is <strong>{{ user.account.balance }}</strong>.</p>
+            <p>Thank you for banking with us.</p>
+            <p>Best regards,</p>
+            <p><strong>Nafis Trust Bank</strong></p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Nafis Trust Bank. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

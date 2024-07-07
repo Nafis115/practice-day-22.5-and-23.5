@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head_title %}Transfer funds{% endblock %}
+{% block content %}
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Transfer Funds</h2>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <div>
+                <label for="id_receiver_account_no" class="block text-sm font-medium text-gray-700">Receiver Account Number</label>
+                {{ form.receiver_account_no }}
+            </div>
+            <div>
+                <label for="id_amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                {{ form.amount }}
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">Transfer</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
